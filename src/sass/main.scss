@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+};
+
+html, body {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    background: #000;
+};
+
+.app {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    .btn {
+        color: #fff;
+        cursor: pointer;
+        height: 3rem;
+        width: 3rem;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: 0.7s ease-in;
+        }
+    }
+
+    #left {
+        left: 3%;
+    }
+
+    #right {
+        left: 95%;
+    }
+
+    .btnBoxLeft {
+        z-index: 100;
+        position: absolute;
+        left: 2.5%;
+    }
+
+    .btnBoxRight {
+        z-index: 100;
+        position: absolute;
+        left: 95%;
+    }
+
+    .carousel {
+        position: relative;
+        height: 80%;
+        width: 80%;
+        display: flex;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: 0.7s ease-in-out;
+        };
+
+        #imgOne {
+            transform: translateX(0%);
+        };
+
+        #imgTwo {
+            transform: translateX(100%);
+        };
+
+        #imgThree {
+            transform: translateX(200%);
+        }
+    }
+};
+
